@@ -1,0 +1,97 @@
+.form-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 700px;
+     max-width: 1500px;
+     width: 100%;
+     background: rgb(177, 226, 255);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    }
+h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: black;
+      font-size: 30px;
+    }
+.body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    } 
+.usuario {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.usuario::before {
+      content: "👤";
+    }
+.senha {
+    width: 100%;
+      padding: 5px;
+      margin-bottom: 5px;
+      border: 1px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+.senha::before {
+      content: "🔒";
+    }
+.buttons button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      
+    }
+.buttons button::after {
+      content: '';
+      width: 0;
+      left: 0;
+      top: 0;
+      position: absolute;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: width 0.3s ease;
+      border-radius: 8px;
+    }
+
+.buttons button:hover::after {
+      width: 100%;
+    }
+@media (max-width: 600px) {
+      .form-container {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+@media(min-width: 601px) and (max-width: 1024px) {
+      .form-container {
+        max-width: 70%;
+      }
+    }    
+@media (max-width: 1025px) {
+      .form-container {
+        padding: 100px 20px;
+        max-width: 90%;
+      }
+    }
